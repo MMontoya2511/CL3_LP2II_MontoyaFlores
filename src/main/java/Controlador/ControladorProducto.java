@@ -79,7 +79,7 @@ public class ControladorProducto extends HttpServlet {
 				List<TblProductocl3> listado=crud.ListadoProducto();
 				request.setAttribute("listadodeclientes",listado);
 				//redireccionar
-				request.getRequestDispatcher("/ListadoProductos.jsp");
+				request.getRequestDispatcher("/FormRegistrarProducto");
 				//salimos
 				break;
 				

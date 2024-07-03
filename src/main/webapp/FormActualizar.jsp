@@ -37,21 +37,21 @@
    <tr>
    <td>PrecioVenta</td>
    <td>
-   <input type="text" name="pv">
+   <input type="text" name="precioVenta">
    </td>
    </tr>
    
    <tr>
    <td>PrecioCompleto</td>
    <td>
-   <input type="text" name="pc">
+   <input type="text" name="precioCompra">
    </td>
    </tr>
    
    <tr>
    <td>Estado</td>
    <td>
-   <input type="text" name="Estadi">
+   <input type="text" name="estado">
    </td>
    </tr>
    

@@ -13,15 +13,14 @@
 <form  method="post" action="ControladorProducto">
 
 <%
-
- 	String cod = request.getAttribute("codigo").toString();
-    String nom = request.getAttribute("nombre").toString();
-    Double precioVenta = Double.parseDouble(request.getAttribute("pv").toString());
-    Double precioCompleto = Double.parseDouble(request.getAttribute("pc").toString());
-    String est = request.getAttribute("estado").toString();
-    String desc = request.getAttribute("descripcion").toString();
-
+    String cod = (request.getAttribute("codigo") != null) ? request.getAttribute("codigo").toString() : "";
+    String nom = (request.getAttribute("nombre") != null) ? request.getAttribute("nombre").toString() : "";
+    String precioVentaStr = (request.getAttribute("precioVenta") != null) ? request.getAttribute("precioVenta").toString() : "";
+    String precioCompletoStr = (request.getAttribute("precioCompra") != null) ? request.getAttribute("precioCompra").toString() : "";
+    String est = (request.getAttribute("estado") != null) ? request.getAttribute("estado").toString() : "";
+    String desc = (request.getAttribute("descripcion") != null) ? request.getAttribute("descripcion").toString() : "";
 %>
+
 <table align="center"  borde="2">
 <input type="hidden" name="codigo"  value="<%=cod%>">
 <tr>
@@ -32,32 +31,30 @@
 </tr>
 <tr>
 <td>Codigo</td>
-<td><input type="text" name="apellido" value="<%=cod%>"></td>
+<td><input type="text" name="codigo" value="<%=cod%>"></td>
 </tr>
 <tr>
 <td>PrecioVenta</td>
-<td><input type="text" name="dni" value="<%=precioVenta%>"></td>
+<td><input type="text" name="precioVenta" value="<%=precioVentaStr%>"></td>
 </tr>
 <tr>
 <td>Precio Completo</td>
-<td><input type="text" name="email" value="<%=precioCompleto%>"></td>
+<td><input type="text" name="precioCompra" value="<%=precioCompletoStr%>"></td>
 </tr>
 <tr>
 <td>Estado</td>
-<td><input type="text" name="telefono" value="<%=est%>"></td>
+<td><input type="text" name="estado" value="<%=est%>"></td>
 </tr>
 <tr>
 <td>Descripcion</td>
-<td><input type="text" name="sexo" value="<%=desc%>"></td>
+<td><input type="text" name="descripcion" value="<%=desc%>"></td>
 </tr>
 
 <tr>
-<td colspan="2" align="center"><input type="submit" value="Actulizar Cliente"></td>
+<td colspan="2" align="center"><input type="submit" value="Actualizar Cliente"></td>
 </tr>
 
 </table>
-
-
 
 </form>
 
